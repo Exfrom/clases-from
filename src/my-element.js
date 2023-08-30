@@ -33,7 +33,7 @@ export class MyElement extends LitElement {
 
 
     setValue() {
-        // this.username = this.shadowRoot.querySelector('#username').value;
+        this.username = this.shadowRoot.querySelector('#username').value;
         this.password = this.shadowRoot.querySelector('#password').value;
         this.email = this.shadowRoot.querySelector('#email').value;
         this.show = true;
@@ -61,12 +61,14 @@ export class MyElement extends LitElement {
                         <div class="card">
                         
                             <div class="card-body">
-                                ${this.show ? html`<div class="input-group flex-nowrap" >
+                                ${this.show ? html`
+                            <div class="input-group flex-nowrap" >
                                 <span class="input-group-text">Username</span>
                                 <input type="text" class="form-control" id="username" placeholder="" >
                             </div>` : html``}
                                 
                                 <br>
+                                
                                 <div class="input-group flex-nowrap">
                                     <span class="input-group-text" id="">Password</span>
                                     <input type="text" id="password" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="addon-wrapping">
